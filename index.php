@@ -1,5 +1,18 @@
 <?php
+// declare all variables
+$x = 0;
+$y = 0;
+$prod = 0;
+$op = '';
 
+$object=new Calc;
+//print_r($object);		
+
+echo $object->calculate($x, $y, $op); 
+								   
+class Calc{										
+public $x, $y, $op;
+										                                                                         
 // function to calculate and return result
 function calculate($x, $y, $op) { 
     // calculate $prod using switch (case) statement
@@ -20,11 +33,8 @@ function calculate($x, $y, $op) {
     // return the result
     return $prod;
 }
-// declare all variables
-$x = 0;
-$y = 0;
-$prod = 0;
-$op = '';
+}
+
 // grab the form values from $_GET hash
 extract($_GET);
 ?>
@@ -72,5 +82,8 @@ extract($_GET);
             }
         }
     ?>
-      </body>
+	
+ </body>
 </html>
+
+
